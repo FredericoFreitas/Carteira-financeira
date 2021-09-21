@@ -1,5 +1,5 @@
 nome = str(input('Óla, Digite seu nome: ')).title().strip()
-cores = {'roxo':'\033[1;35m', 'azul':'\033[;34m', 'red':'\033[1;31m', 'fim':'\033[m'}
+cores = {'roxo':'\033[1;35m', 'azul':'\033[;34m', 'red':'\033[1;31m','verde':'\033[;33m', 'fim':'\033[m'}
 print('Hello {}{}{}!!! '.format(cores['roxo'], nome, cores['fim']))
 print('A partir de agora vou te auxiliar na sua gestão financeira ok.')
 
@@ -19,7 +19,7 @@ else:
 renda = float(input('Digite o valor da renda: '))
 
 
-internet = str(input('\nVoçê possui algum plano de internet em casa? s ou n? ')).strip()
+internet = str(input('\nVoçê possui algum plano de internet em casa? s ou n ? ')).strip()
 if internet == 's':
     net = float(input('Digite o valor da fatura: '))
 else:
@@ -34,7 +34,22 @@ else:
 
 if internet == 's':
     dispesa = (ordenado - r - água - net - renda)
-    print('\nO valor do seu ordenado: ${}{:.2f}{}, menos: luz, gás, agua e internet é de: ${}{:.2f}{} '.format(cores['azul'],ordenado,cores['fim'],cores['azul'],dispesa,cores['fim']))
+    x = dispesa
+    print('\nO valor do seu ordenado: ${}{:.2f}{}, menos: luz, gás, agua e internet é de: ${}{:.2f}{} '.format(cores['azul'],ordenado,cores['fim'],cores['azul'],x,cores['fim']))
 else:
     dispesa = (ordenado - r - água - renda)
-    print('O valor do seu ordenado: ${}{:.2f}{}, menos: luz, gás e agua é de: ${}{:.2f}{} '.format(cores['azul'],ordenado,cores['fim'],cores['azul'],dispesa,cores['fim']))
+    x = dispesa
+    print('O valor do seu ordenado: ${}{:.2f}{}, menos: luz, gás e agua é de: ${}{:.2f}{} '.format(cores['azul'],ordenado,cores['fim'],cores['azul'],x,cores['fim']))
+
+açao = str(input('\nVai querer adicionar mais alguma dispesa? s ou n ? ')).strip()
+if açao == 's':
+    variavel = str(input('\nDigite o nome da da dispesa para registrar: ')).title().strip()
+    nome = variavel
+    valor = float(input('Qual o valor vai retirar para: {}{}{}?: '.format(cores['verde'],nome,cores['fim'])))
+    y = x - valor
+    print('Foi retirado: ${}{:.2f}{}, para {}{}{}, restando na carteira o valor de: ${}{:.2f}{}'.format(cores['azul'],valor,cores['fim'],cores['verde'],nome,cores['fim'],cores['azul'],y,cores['fim']))
+else:
+    print('ok, {}{}{}: temos na carteira valor total de: ${}{:.2f}{}'.format(cores['roxo'],nome,cores['fim'],cores['azul'],x,cores['fim']))
+
+
+print('\33[7;30;41mPrograma inda em desenvolvimento\... \33[m')
