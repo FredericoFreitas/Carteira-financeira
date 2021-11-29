@@ -39,7 +39,7 @@ if internet == 's':
 else:
     dispesa = (ordenado - r - água - renda)
     x = dispesa
-    print('O valor do seu ordenado: ${}{:.2f}{}, menos: luz, gás e água é de: ${}{:.2f}{} '.format(cores['azul'],ordenado,cores['fim'],cores['azul'],x,cores['fim']))
+    print('O valor do seu ordenado: ${}{:.2f}{}, menos: luz, gás e água, aluguel é de: ${}{:.2f}{} '.format(cores['azul'],ordenado,cores['fim'],cores['azul'],x,cores['fim']))
 
 açao = str(input('\nVai querer adicionar mais alguma dispesa? s ou n ? ')).strip()
 if açao == 's':
