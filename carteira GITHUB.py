@@ -11,16 +11,14 @@ if gaseluz == 's':
 
     luzegas = float(input('\nDigite o valor total da sua fatura: '))
     r = luzegas
-    porcentagem_sim = 100*r/ordenado
-    ps = porcentagem_sim
-    print('A porcentagem da dispesa de luz e gás é de: {:.2f}%'.format(ps))
+    porcentagem = 100*r/ordenado
+    print('A porcentagem da dispesa de luz e gás é de: {:.2f}%'.format(porcentagem))
 else:
     luz = float(input('\nDigite o valor da fatura de Luz: '))
     gas = float(input('Digite o valor que costuma comprar o gás: '))
     r = luz+gas
-    porcentagem_nao = 100*r/ordenado
-    pn = porcentagem_nao
-    print('A porcentagem da dispesa de luz e gás é de: {:.2f}%'.format(pn))
+    porcentagem = 100*r/ordenado
+    print('A porcentagem da dispesa de luz e gás é de: {:.2f}%'.format(porcentagem))
 água = float(input('Digite o valor da fatura de água: '))
 renda = float(input('Digite o valor da renda: '))
 
