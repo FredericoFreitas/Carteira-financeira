@@ -15,6 +15,6 @@ fundamentos usados no projeto:
  
  **RoadMap**
  - [ ] Até: 31/12/2021 > Concluir, repetições de condições automaticas.
- - [ ] Até: 31/03/2022 > Integrar Banco de Dados.
- - [ ] Até: 31/07/2022 > Iniciar, Interface Grafica
+ - [ ] Até: 31/04/2022 > Integrar Banco de Dados.
+ - [ ] Até: 31/08/2022 > Iniciar, Interface Grafica
  - [ ] Buscar sempre melhorias no projeto.
