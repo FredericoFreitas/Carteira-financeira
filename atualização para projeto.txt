@@ -1,4 +1,0 @@
-atualização para o  projeto::]
-
- tentar criar uma condição : 
-onde valor bool deve ser Truee, se nao repete novamente a pergunta 
