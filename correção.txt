@@ -1,0 +1,2 @@
+corrigir os nomes das variaveis do while
+corrigir calculo do while 
