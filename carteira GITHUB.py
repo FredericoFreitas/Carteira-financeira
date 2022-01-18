@@ -62,8 +62,8 @@ while açao == 's':
     valor = float(input('\nQual o valor vai retirar para: {}{}{}?: '.format(cores['verde'],variavel,cores['fim'])))
     valor_da_açao = total - valor
     porcentagem = 100 * valor / ordenado
-    print('Foi retirado: ${}{:.2f}{}, para {}{}{}, restando na carteira o valor de: ${}{:.2f}{}'.format(cores['azul'],valor,cores['fim'],cores['verde'],nome,cores['fim'],cores['azul'],valor_da_açao,cores['fim']))
-    print('A porcentagem da dispesa, {}, é de: {:.2f} %'.format(nome, porcentagem))
+    print('Foi retirado: ${}{:.2f}{}, para {}{}{}, restando na carteira o valor de: ${}{:.2f}{}'.format(cores['azul'],valor,cores['fim'],cores['verde'],variavel,cores['fim'],cores['azul'],valor_da_açao,cores['fim']))
+    print('A porcentagem da dispesa, {}, é de: {:.2f} %'.format(variavel, porcentagem))
     açao = str(input('\nVai querer adicionar mais alguma dispesa? s ou n ?: ')).strip()
 else:
     print('\nok, {}{}{}: temos na carteira valor total de: ${}{:.2f}{}'.format(cores['roxo'],nome,cores['fim'],cores['azul'],total,cores['fim']))
