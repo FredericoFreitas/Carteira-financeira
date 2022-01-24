@@ -60,9 +60,9 @@ açao = str(input('\nVai querer adicionar mais alguma dispesa? s ou n ?: ')).str
 while açao == 's':
     variavel = str(input('\nDigite o nome da da dispesa para registrar: ')).title().strip()
     valor = float(input('\nQual o valor vai retirar para: {}{}{}?: '.format(cores['verde'],variavel,cores['fim'])))
-    valor_da_açao = total - valor
     porcentagem = 100 * valor / ordenado
-    print('Foi retirado: ${}{:.2f}{}, para {}{}{}, restando na carteira o valor de: ${}{:.2f}{}'.format(cores['azul'],valor,cores['fim'],cores['verde'],variavel,cores['fim'],cores['azul'],valor_da_açao,cores['fim']))
+    resto = total - valor
+    print('Foi retirado: ${}{:.2f}{}, para {}{}{}, restando na carteira o valor de: ${}{:.2f}{}'.format(cores['azul'],valor,cores['fim'],cores['verde'],variavel,cores['fim'],cores['azul'],resto,cores['fim']))
     print('A porcentagem da dispesa, {}, é de: {:.2f} %'.format(variavel, porcentagem))
     açao = str(input('\nVai querer adicionar mais alguma dispesa? s ou n ?: ')).strip()
 else:
@@ -70,4 +70,3 @@ else:
 
 
 print('\33[7;30;41mPrograma ainda em desenvolvimento\... \33[m')
-
