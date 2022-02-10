@@ -5,10 +5,11 @@ print('A partir de agora vou te auxiliar na sua gestão financeira ok.')
 
 ordenado = float(input('\nDigite o valor do seu Ordenado: '))
 print('\n{}OBS: !!!{}''Em portugal normalmente a conta de luz e gás são juntas e outras separas.'.format(cores['red'], cores['fim']))
+
+#informações refente luz e gás 
 gaseluz = str(input('A sua fatura é junta? s ou n ?: ')).strip()
 
 if gaseluz == 's':
-
     luzegas = float(input('\nDigite o valor total da sua fatura: '))
     valor = luzegas
     porcentagem = 100 * valor / ordenado
@@ -20,14 +21,17 @@ else:
     porcentagem = 100 * valor / ordenado
     print('A porcentagem da dispesa de luz e gás é de: {:.2f} %'.format(porcentagem))
 
+#informaçôes sobre água.
 água = float(input('\nDigite o valor da fatura de água: '))
 porcentagem = 100 * água / ordenado
 print('A porcentagem da dispesa de água é de: {:.2f} %'.format(porcentagem))
 
+#informaçôes sobre renda.
 renda = float(input('\nDigite o valor da renda/Aluguel: '))
 porcentagem = 100 * renda / ordenado
 print('A porcentagem da dispesa de Aluguel é de: {:.2f} %'.format(porcentagem))
 
+#informaçôes sobre internet
 internet = str(input('\nVoçê possui algum plano de internet em casa? s ou n ?: ')).strip()
 if internet == 's':
     net = float(input('Digite o valor da fatura: '))
@@ -36,13 +40,13 @@ if internet == 's':
 else:
     print('')
 
+#calculos das dispesas 
 if gaseluz == 's':
-    dispesa = (ordenado - luzegas - água)
-
+    dispesa = (ordenado - luzegas - água - renda)
 else:
-    dispesa = (ordenado - luz - gas - água)
+    dispesa = (ordenado - luz - gas - água - renda)
 
-
+#calculos das dispesas com internet e calulo total
 if internet == 's':
     dispesa = (ordenado - valor - água - net - renda)
     total = dispesa
@@ -56,6 +60,7 @@ else:
     print('O valor do seu Ordenado: ${}{:.2f}{}, menos: luz, gás e água, aluguel é de: ${}{:.2f}{} '.format(cores['azul'],ordenado,cores['fim'],cores['azul'],total,cores['fim']))
     print('A porcentagem total das dispesas é de: {:.2f} %'.format(porcentagem))
 
+#adicionando novas dispesas 
 açao = str(input('\nVai querer adicionar mais alguma dispesa? s ou n ?: ')).strip()
 while açao == 's':
     variavel = str(input('\nDigite o nome da da dispesa para registrar: ')).title().strip()
@@ -70,3 +75,4 @@ else:
 
 
 print('\33[7;30;41mPrograma ainda em desenvolvimento\... \33[m')
+
