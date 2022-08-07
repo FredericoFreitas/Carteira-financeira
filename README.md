@@ -14,7 +14,7 @@ fundamentos usados no projeto:
 * operadores aritimeticos = (Soma, Subtração, Porcentagem)
  
  **RoadMap**
- - [x] Até: 31/12/2021 > Concluir, repetições de condições automaticas.
- - [ ] Até: 31/04/2022 > Integrar Banco de Dados.
- - [ ] Até: 31/08/2022 > Iniciar, Interface Grafica
+ - [x] Até: 12/2022 > Concluir, repetições de condições automaticas.
+ - [ ] Até: 12/2022 > Integrar Banco de Dados.
+ - [ ] Até: 03/2023 > Iniciar, Interface Grafica
  - [ ] Buscar sempre melhorias no projeto.
