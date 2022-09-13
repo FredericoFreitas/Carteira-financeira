@@ -1,2 +1,6 @@
-corrigir os nomes das variaveis do while
-corrigir calculo do while 
+corrigir linha 48 ( nao pode digitar letras, somente numeros)
+corrigir linha 47 ( obriga escrever nome da dispesa )
+corrigir linha 45 ( somente sim ou nao, com enter ele assumi o nao )
+corrigir linha 23 ( somente sim ou nao, com enter ele assumi o nao)
+corrigir linha 16 ( somente numeros)
+corrigir linha 23 ( quando digitado yes, se nao tiver nenhum arquivo .txt ele mostre a mensagem dizendo que nao tem, e volte para pergunta)
