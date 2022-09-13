@@ -1,0 +1,13 @@
+corrigir linha 48 ( nao pode digitar letras, somente numeros)
+corrigir linha 47 ( obriga escrever nome da dispesa )
+corrigir linha 45 ( somente sim ou nao, com enter ele assumi o nao )
+corrigir linha 23 ( somente sim ou nao, com enter ele assumi o nao)
+corrigir linha 16 ( somente numeros)
+corrigir linha 23 ( quando digitado yes, se nao tiver nenhum arquivo .txt ele mostre a mensagem dizendo que nao possui, e volte para pergunta)
+
+
+1 > criar menu
+2 > linha 19 não deixar passar direto, apenas sim ou nao  (jogar para lowercase)
+3 > colocar float :.2f no banco de dados
+4 > linha 40 nao deixar passar sem argumento 
+5 > 

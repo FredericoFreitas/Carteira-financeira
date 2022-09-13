@@ -1,6 +1,6 @@
 import os
 os.system("cls")
-#add comentario
+
 
 nome = str(input('Óla, Digite seu nome: ')).title().strip()
 cores = {'roxo':'\033[1;35m', 'azul':'\033[;34m', 'red':'\033[1;31m','verde':'\033[;32m', 'fim':'\033[m', 'amarelo': '\033[;33m'}
@@ -14,7 +14,8 @@ def banco_de_dados(soma):
     print(soma)
     return(soma)
 
-#informaçao sobre banco de dados
+#informaçao sobre banco de dados 
+#linha 10 do arquivo correção (adicionar while neste block)
 informaçao_banco = str(input("\nJá possui um banco de dados? [y] / [n] ")).strip()
 if informaçao_banco == 'y':
     with open('carteira.txt', 'r') as arquivo:
