@@ -26,8 +26,11 @@ def menu():
         add_value()
     elif action == 4:
         add_expenses()
+    elif action == 5:
+        finish()
     else:
-        "finalizar programa ou sair "
+        print('[!] ERRO opção invalida, escolha uma opção valida.')
+        menu()
 
 def new_database():
     bank = open('carteira.txt', 'w')
@@ -49,7 +52,6 @@ def open_database():
         #tentar retornar valor para usar na funçao 3 do menu
 
 def add_value():
-    #quando adiconado nao esta salvando na opcao 2 
     #tentar chamar a funçao open_database
     print('[+] Verificando valor disponivel . . . ')
     time.sleep(1.5)
@@ -59,10 +61,20 @@ def add_value():
     bank_str =float(bank_str)
     valor = float(input('Digite o valor: '))
     carteira = bank_str + valor
-    print('\n[+] Adicionando valor . . .')
-    time.sleep(1.5)
-    print('\n[+] Valor adicionado com SUCESSO !!')
-    print('\nValor total agora disponivel é de: {:.2f} Euros.\n'.format(carteira))
+
+    if valor < 0:
+        print('[!] ATENÇÃO !!!'
+        '\n[!] Valor negatigo significa dispesa, volte ao menu e escolha a: "OPÇÃO [ 4 ], '
+        'para adicionar uma nova dispesa.\n')
+    else:
+        print('\n[+] Adicionando valor . . .')
+        time.sleep(1.5)
+        bank = open('carteira.txt', 'w')
+        bank.write(str("{:.2f}".format(carteira)))
+        bank.close
+        print('\n[+] Valor adicionado com SUCESSO !!')
+        print('\nValor total agora disponivel é de: {:.2f} Euros.\n'.format(carteira))
+
 
 def add_expenses():
     print('[+] Verificando valor disponivel . . . ')
@@ -76,12 +88,12 @@ def add_expenses():
     while expense == 's':
         name_expense =  str(input('\nDigite o nome da da dispesa para registrar: ')).title().strip()
         valor = float(input('\nQual o valor vai retirar para: {}{}{} ?: '.format(cores['amarelo'],name_expense,cores['fim'])))
-        print('[+] registrando dispesa . . .')
+        print('[+] registrando  dispesa . . .')
         time.sleep(1.5)
         porcentagem = 100 * valor / bank_str
         bank_str = bank_str - valor 
         print('temos disponivel na carteira valor total de: $ {}{:.2f}{}'.format(cores['azul'], bank_str, cores['fim']))
-        print('A porcentagem da dispesa, {}{}{}, é de: {}{:.2f}{} %'.format(cores['amarelo'], name_expense, cores['fim'], cores['verde'], porcentagem, cores['fim']))
+        print('A porcentagem da dispesa, {}{}{}, é de: {}{:.2f}{} %, do saldo total.'.format(cores['amarelo'], name_expense, cores['fim'], cores['verde'], porcentagem, cores['fim']))
         expense = str(input('\nVai querer adicionar mais alguma dispesa? s ou n ?: ')).strip()
     else:
         print('\nok, {}{}{}: temos disponivel na carteira valor total de: ${}{:.2f}{}\n'.format(cores['roxo'],nome,cores['fim'],cores['azul'],bank_str,cores['fim']))
@@ -92,8 +104,12 @@ def add_expenses():
         bank = open('carteira.txt', 'w')
         bank.write(str(bank_str))
         bank.close()
-        print('#'*3, 'valor já salvo no banco de dados !!', '#'*3)
+        print('[+]','#'*3, 'Valor já salvo no banco de dados !!\n', '#'*3)
 
+def finish():
+    print('[+] Encerrando o programa ...')
+    time.sleep(1.5)
+    print('[+] Programa encerrado.')
 
 menu()
 """
