@@ -1,45 +1,11 @@
 a ideia é;
 
-1 escrever as boas vindas > ok 
+1 escrever as boas vindas > 
 
-2 perguntar ao usuario se ja existe algum banco de dados > ok 
+2 perguntar ao usuario qual opção deseja > 
 
-3 caso tenha ler o arquivo de banco de dados / mostrar valor já salvo
-
-4 pergunte se vai add mais dinheiro 
-    1 somar o valor ja salvo  + dinheiro adicioando caso adicione
-
-    2 cria um loop enquanto tiver dispesas para add ele adiciona: o nome, valor e porcentagem da dispesas, 
-    quando nao tiver mais dispesas para adicionar ele, faz o calculo de valor total das dispesas com valor salvo
-    da porcentagem total, depois salva o valor restante no arquivo de banco de dados, finaliza o programa.
-    
-    3 se vai querer add dispesas sim ou nao;
-
-    4 qual nome da dispesa; > ok 
-    
-    5 qual valor retirado; > ok
-    
-    6 calculo de porcentagem total da "carteira" 
-
-    7 finish
-
-
-5 caso nao tenha crie um novo banco de dados > ok 
-
-6 pergute ao usuario se vai querer adicioar algum valor  > ok
-
-7 fazer um loop com  > ok
-{
-    1 se vai querer add dispesas sim ou nao; > ok
-    2 qual nome da dispesa; > ok 
-    3 qual valor retirado; > ok
-    4 calculo de porcentagem total da carteira > ok
-    5 calcular porcentagem do valor adicionado
-    6 finish
-}
-8 quando nao add mais dispesa 
-{
-    1 abrir o banco de dados; > ok
-    2 escrever as informações; > ok 
-    3 fechar banco de dados; > ok
-} 
+*criar um novo registro
+*verificar saldo disponivel
+*adicionar novos valores
+*adicionar novas dispesas ou remover valores
+*encerrar o programa
