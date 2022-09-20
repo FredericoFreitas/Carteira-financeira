@@ -13,8 +13,6 @@ corrigir linha 23 ( quando digitado yes, se nao tiver nenhum arquivo .txt ele mo
 5 > 
 
 menu
-1 ok ele cria arquivo.txt colocar saldo de 00,00 
-2 ok abre o arquivo e printa o valor/ depois encerra o programa
-3 " ok " abre o arquivo le printa o saldo anterior, solicita novo valor, faz a soma e printa valor final, (ele nao salva no arquivo .txt, quando coloca opçao 4 ele nao mostra valor)
+opçao 2 > se nao tiver arquivo ele da erro, (tentar fazer algo para perguntar se quer criar um novo)
+opçao 3 > deixar passar apenas numeros possitivos ( nao deixar passar com: enter, letras , simbolos, )
 4  erro ( se o valor da carteira for menor ou igual a 0 ele da erro)
-5 ok ( tentar colocar msm de fechamento de programa algo do genero)
