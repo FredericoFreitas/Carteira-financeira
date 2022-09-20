@@ -73,7 +73,7 @@ def add_value():
         bank.write(str("{:.2f}".format(carteira)))
         bank.close
         print('\n[+] Valor adicionado com SUCESSO !!')
-        print('\nValor total agora disponivel é de: {:.2f} Euros.\n'.format(carteira))
+        print('\n[+] Valor total agora disponivel é de: {:.2f} Euros.\n'.format(carteira))
 
 
 def add_expenses():
@@ -81,7 +81,7 @@ def add_expenses():
     time.sleep(1.5)
     with open('carteira.txt', 'r') as arquivo:
         bank_str = arquivo.read()
-        print('\nsaldo da carteira é de: $ {} Euros'.format(bank_str))
+        print('\n[+] Saldo da carteira é de: $ {} Euros'.format(bank_str))
 
     bank_str = float(bank_str)
     expense = str(input('\nadicionar dispesa? s ou n ?: ')).strip()
@@ -92,8 +92,8 @@ def add_expenses():
         time.sleep(1.5)
         porcentagem = 100 * valor / bank_str
         bank_str = bank_str - valor 
-        print('temos disponivel na carteira valor total de: $ {}{:.2f}{}'.format(cores['azul'], bank_str, cores['fim']))
-        print('A porcentagem da dispesa, {}{}{}, é de: {}{:.2f}{} %, do saldo total.'.format(cores['amarelo'], name_expense, cores['fim'], cores['verde'], porcentagem, cores['fim']))
+        print('[+] Temos disponivel na carteira valor total de: $ {}{:.2f}{}'.format(cores['azul'], bank_str, cores['fim']))
+        print('[+] A porcentagem da dispesa, {}{}{}, é de: {}{:.2f}{} %, do saldo total.'.format(cores['amarelo'], name_expense, cores['fim'], cores['verde'], porcentagem, cores['fim']))
         expense = str(input('\nVai querer adicionar mais alguma dispesa? s ou n ?: ')).strip()
     else:
         print('\nok, {}{}{}: temos disponivel na carteira valor total de: ${}{:.2f}{}\n'.format(cores['roxo'],nome,cores['fim'],cores['azul'],bank_str,cores['fim']))
@@ -104,12 +104,12 @@ def add_expenses():
         bank = open('carteira.txt', 'w')
         bank.write(str(bank_str))
         bank.close()
-        print('[+]','#'*3, 'Valor já salvo no banco de dados !!\n', '#'*3)
+        print('[+]','#'*3, 'Valor já salvo no banco de dados !!', '#'*3, '\n')
 
 def finish():
     print('[+] Encerrando o programa ...')
     time.sleep(1.5)
-    print('[+] Programa encerrado.')
+    print('[+] Programa encerrado.\n')
 
 menu()
 """

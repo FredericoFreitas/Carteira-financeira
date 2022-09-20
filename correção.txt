@@ -1,10 +1,3 @@
-corrigir linha 48 ( nao pode digitar letras, somente numeros)
-corrigir linha 47 ( obriga escrever nome da dispesa )
-corrigir linha 45 ( somente sim ou nao, com enter ele assumi o nao )
-corrigir linha 23 ( somente sim ou nao, com enter ele assumi o nao)
-corrigir linha 16 ( somente numeros)
-corrigir linha 23 ( quando digitado yes, se nao tiver nenhum arquivo .txt ele mostre a mensagem dizendo que nao possui, e volte para pergunta)
-
 
 1 > criar menu
 2 > linha 19 não deixar passar direto, apenas sim ou nao  (jogar para lowercase)
@@ -18,3 +11,9 @@ menu
 3 " ok " abre o arquivo le printa o saldo anterior, solicita novo valor, faz a soma e printa valor final, (ele nao salva no arquivo .txt, quando coloca opçao 4 ele nao mostra valor)
 4  erro ( se o valor da carteira for menor ou igual a 0 ele da erro)
 5 ok ( tentar colocar msm de fechamento de programa algo do genero)
+
+
+opção 4 
+quando solicita s ou n > se der enter ou qualquer outra tecla ele assumi o else
+ele passar sem digitar o nome da dispesa
+se der enter no valor da erro 
