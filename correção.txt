@@ -4,7 +4,10 @@ nas escolas de opção do menu, se digitar letras da erro, simbolos numeros nega
 na escola de opçoes restringir apenas um numero, pois se digitar ex( 2g ) da erro 
 
 
-opção 3 > se digitar letras da erro
+opção 3 > se digitar letras da erro ** / ** se der enter direto da erro  ** /** se colocar simbolos da erro
+
+olhar a opção 4 para resolver ( a resposta esta na 4 opção )
+
 opção 4 > 
 (se o valor da carteira for menor ou igual a 0 ele da erro)              
 a porcentagem nao esta fazendo calculos se o banco for negativo 

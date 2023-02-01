@@ -116,12 +116,12 @@ def add_expenses():
     expense = str(input('\nadicionar dispesa? s ou n ?: ')).strip().lower()
     while expense == 's':
         try: 
-            name_expense =  str(input('\nDigite o nome da da dispesa para registrar: ')).title().strip()
+            name_expense =  str(input('\nDigite o nome da dispesa para registrar: ')).title().strip()
             valor = float(input('\nQual o valor vai retirar para: {}{}{} ?: '.format(cores['amarelo'],name_expense,cores['fim'])))
             if valor < 0:
                 print('\n[!] ERROR, dispesas tem que ser valor acima de $ 0,00 ')
                 print('\n[+] Caso não deseje adicionar mais nenhuma dispesa volte ao menu.')
-                escolha = str(input('\n[+] DESEJA VOLTAR AO MENU INICIAL ? (s) / (n)\n')).strip().lower()
+                escolha = str(input('\n[+] DESEJA VOLTAR AO MENU INICIAL ? (S) / (N)\n')).strip().lower()
                 if escolha == 's':
                     menu()
                 else:
